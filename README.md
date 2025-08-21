@@ -1,7 +1,7 @@
 # 👋 Hi, I'm ReproducerAI  
 
 Welcome to my GitHub profile!  
-I run **[AI Repro Blog](https://reproducerai.github.io/ai-repro-blog/)** — a project where I independently test and document the reproducibility of AI research on open datasets.  
+I run **[reproducerai](https://reproducerai.github.io/ai-repro-blog/)** — a project where I independently test and document the reproducibility of AI research on open datasets.  
 
 ---
 
@@ -13,7 +13,7 @@ I run **[AI Repro Blog](https://reproducerai.github.io/ai-repro-blog/)** — a p
 ---
 
 ### 📂 Featured Project
-- 🌐 [AI Repro Blog](https://reproducerai.github.io/ai-repro-blog/)  
+- 🌐 [reproducerai](https://reproducerai.github.io/ai-repro-blog/)  
 
 ---
 
