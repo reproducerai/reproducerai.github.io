@@ -24,9 +24,9 @@ helping researchers, engineers, and companies validate claims with open data.
 ---
 
 ### 📫 Connect
-- 💼 [LinkedIn](https://www.linkedin.com/) (add yours here)  
-- 🐦 [Twitter/X](https://twitter.com/) (add yours here)  
-- ✉️ Contact: youremail@example.com  
+- 💼 [LinkedIn](https://www.linkedin.com/in/minhaj-uddin-ansari-040573160/) 
+- 🐦 [Twitter/X](https://x.com/minhajansari_) 
+- ✉️ Contact: reproducerai@gmail.com  
 
 ---
 ⭐️ *Check out my latest reproducibility reports in the blog above!*
