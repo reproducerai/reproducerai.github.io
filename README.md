@@ -1,4 +1,4 @@
-# 👋 Hi, I'm **[Minhaj](https://reproducerai.github.io/ai-repro-blog/)**  
+# 👋 Hi, I'm **[Minhaj](https://ansariminhaj.github.io)**  
 
 Welcome to my GitHub profile!  
 I run **[reproducerai](https://reproducerai.github.io/ai-repro-blog/)** — a project where I independently test and document the reproducibility of AI research on open datasets.  
