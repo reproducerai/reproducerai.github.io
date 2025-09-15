@@ -3,7 +3,7 @@
 ### 🔬 Purpose
 - 🧪 Test how different AI architectures, learning strategies, and datasets affect model performance.
 - 🎯 Use synthetic datasets in a controlled environment to isolate and understand the impact of each change.
-- 📝 Share findings on my blog:  **[reproducerai_web](https://reproducerai.github.io/ai-repro-blog/)**. 
+- 📝 Share findings on my here.
 
 ---
 
