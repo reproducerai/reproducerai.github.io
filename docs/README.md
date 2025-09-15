@@ -1,5 +1,3 @@
-# ReproducerAI
-
 ### 🔬 Purpose
 - 🧪 Test how different AI architectures, learning strategies, and datasets affect model performance.
 - 🎯 Use synthetic datasets in a controlled environment to isolate and understand the impact of each change.
