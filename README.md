@@ -1,14 +1,14 @@
 # 👋 Hi, I'm **[Minhaj](https://ansariminhaj.github.io)**  
 
-Welcome to my GitHub profile!  
-I run **[reproducerai](https://reproducerai.github.io/ai-repro-blog/)** — a project where I independently test and document the reproducibility of AI research on open datasets.  
+Welcome to my GitHub!  
+I run **[reproducerai](https://reproducerai.github.io/ai-repro-blog/)** — a project where I explore AI models using **synthetic datasets**.  
 
 ---
 
 ### 🔬 What I Do
-- 🧪 **Reproduce AI research** claims on open-source benchmarks  
-- 📊 Compare results with original papers and share transparent findings  
-- 📝 Publish detailed reports on my blog  
+- 🧪 Test how different AI architectures, learning strategies, and datasets affect model performance.
+- 🎯 Use synthetic datasets in a controlled environment to isolate and understand the impact of each change.
+- 📝 Share experiments and insights on my blog. 
 
 ---
 
@@ -17,9 +17,8 @@ I run **[reproducerai](https://reproducerai.github.io/ai-repro-blog/)** — a pr
 
 ---
 
-### 🌱 Long-Term Goal
-To become a trusted source for reproducibility in AI research —  
-helping researchers, engineers, and companies validate claims with open data.
+### 🌱 My Goal
+To understand the fundamentals of AI at a deeper level.
 
 ---
 
@@ -29,4 +28,4 @@ helping researchers, engineers, and companies validate claims with open data.
 - ✉️ Contact: reproducerai@gmail.com  
 
 ---
-⭐️ *Check out my latest reproducibility reports in the blog above!*
+⭐️ *Check out my experiments and insights on synthetic AI datasets on the blog!*
