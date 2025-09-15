@@ -12,7 +12,7 @@ I run **[reproducerai](https://reproducerai.github.io/ai-repro-blog/)** — a pr
 ---
 
 ### 🌱 My Goal
-I often see AI papers adopt certain hyperparameters, architectural choices, or learning strategies without really explaining why they work. Right now, AI development is still mostly trial and error. I want to dig into the fundamentals of AI, so we can make model design and training more deliberate, predictable, and less based on intuition or guesswork.
+AI papers often adopt certain hyperparameters, architectural choices, or learning strategies without really explaining why they work. Right now, AI development is still mostly trial and error. I want to explore the fundamentals of AI, so we can make model design and training more deliberate, predictable, and less based on intuition or guesswork.
 
 ---
 
