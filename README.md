@@ -1,6 +1,5 @@
 # 👋 Hi, I'm **[Minhaj](https://ansariminhaj.github.io)**  
 
-Welcome to my GitHub!  
 I run **[reproducerai](https://reproducerai.github.io/ai-repro-blog/)** — a project where I explore AI models using **synthetic datasets**.  
 
 ---
@@ -25,7 +24,4 @@ To understand the fundamentals of AI at a deeper level.
 ### 📫 Connect
 - 💼 [LinkedIn](https://www.linkedin.com/in/minhaj-uddin-ansari-040573160/) 
 - 🐦 [Twitter/X](https://x.com/minhajansari_) 
-- ✉️ Contact: reproducerai@gmail.com  
-
----
-⭐️ *Check out my experiments and insights on synthetic AI datasets on the blog!*
+- ✉️ reproducerai@gmail.com  
