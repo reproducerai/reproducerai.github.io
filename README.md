@@ -7,17 +7,12 @@ I run **[reproducerai](https://reproducerai.github.io/ai-repro-blog/)** — a pr
 ### 🔬 What I Do
 - 🧪 Test how different AI architectures, learning strategies, and datasets affect model performance.
 - 🎯 Use synthetic datasets in a controlled environment to isolate and understand the impact of each change.
-- 📝 Share experiments and insights on my blog. 
-
----
-
-### 📂 Featured Project
-- 🌐 [reproducerai](https://reproducerai.github.io/ai-repro-blog/)  
+- 📝 Share findings on my blog:  **[reproducerai_web](https://reproducerai.github.io/ai-repro-blog/)**. 
 
 ---
 
 ### 🌱 My Goal
-To understand the fundamentals of AI at a deeper level.
+I often see AI papers adopt certain hyperparameters, architectural choices, or learning strategies without really explaining why they work. Right now, AI development is still mostly trial and error. I want to dig into the fundamentals of AI, so we can make model design and training more deliberate, predictable, and less based on intuition or guesswork.
 
 ---
 
