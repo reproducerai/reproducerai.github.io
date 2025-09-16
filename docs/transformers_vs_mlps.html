@@ -15,15 +15,15 @@ Compare an MLP and a Transformer for sequence classification, focusing on how we
   <li><strong>Transformer:</strong> Single-layer Transformer with 1 attention head; sequence structure preserved.</li>
 </ul>
 
-<p><strong>Training:</strong> Binary classification to detect the motif. Optimized with Adam and BCEWithLogitsLoss. Validation threshold tuned for best accuracy.</p>
+<p><strong>Training:</strong> Binary classification to detect the pattern. Optimized with Adam and BCEWithLogitsLoss. Validation threshold tuned for best accuracy.</p>
 
 <h2>Findings</h2>
 <ul>
   <li>For short sequences (seq_len=10), both MLP and Transformer achieve high accuracy (~97–98%).</li>
   <li>For longer sequences (seq_len=100), the Transformer significantly outperforms the MLP:
     <ul>
-      <li>MLP struggles (~55–60% accuracy) because flattening destroys positional information and the motif signal is diluted.</li>
-      <li>Transformer maintains strong performance (~80–85%) by attending to motif positions across the sequence.</li>
+      <li>MLP struggles (~55–60% accuracy) because flattening destroys positional information and the pattern signal is diluted.</li>
+      <li>Transformer maintains strong performance (~80–85%) by attending to pattern positions across the sequence.</li>
     </ul>
   </li>
 </ul>
