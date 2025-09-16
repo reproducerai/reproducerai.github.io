@@ -1,0 +1,18 @@
+# Experiment: Transformers vs MLPs on Sequence Data
+## Objective:
+Test how different AI architectures handle sequence data, using a simple synthetic dataset with embedded motifs. The goal is to see how well models can detect patterns when sequences vary in length and complexity.
+## Setup:
+Dataset: Synthetic sequences of length 10 (later extended to 100), each position represented by an 8-dimensional embedding. Some sequences contain a small motif, others don’t. Positional encoding is added to each sequence.
+Models:
+MLP (Multi-Layer Perceptron): Flattened input, one hidden layer with 64 units.
+Transformer: Single-layer Transformer with 1 attention head; sequence structure preserved.
+Training: Binary classification to detect the motif. Optimized with Adam and BCEWithLogitsLoss. Validation threshold tuned for best accuracy.
+Findings:
+For short sequences (seq_len=10), both MLP and Transformer achieve high accuracy (~97–98%).
+For longer sequences (seq_len=100), the Transformer significantly outperforms the MLP:
+MLP struggles (~55–60% accuracy) because flattening destroys positional information and the motif signal is diluted.
+Transformer maintains strong performance (~80–85%) by attending to motif positions across the sequence.
+Conclusion:
+MLPs work well for short sequences but fail as sequences grow longer and sparser.
+Transformers handle long sequences effectively by capturing sequence structure and focusing on relevant positions.
+This simple example illustrates why attention-based architectures are preferred for sequence data.
