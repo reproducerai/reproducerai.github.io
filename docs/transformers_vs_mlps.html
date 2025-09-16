@@ -2,12 +2,12 @@
 
 <h2>Objective</h2>
 <p>
-Test how different AI architectures handle sequence data, using a simple synthetic dataset with embedded motifs. 
-The goal is to see how well models can detect patterns when sequences vary in length and complexity.
+Compare an MLP and a Transformer for sequence classification, focusing on how well each detects patterns in sequences of different lengths.
 </p>
 
 <h2>Setup</h2>
-<p><strong>Dataset:</strong> Synthetic sequences of length 10 (later extended to 100), each position represented by an 8-dimensional embedding. Some sequences contain a small motif, others don’t. Positional encoding is added to each sequence.</p>
+<p><strong>Dataset:</strong> Synthetic sequences of varying lengths (10 to 100, in steps of 10), each position represented by an 8-dimensional embedding. 
+    Some sequences contain a small pattern—these are labeled <strong>1</strong>; sequences without the pattern are labeled <strong>0</strong>.</p>
 
 <p><strong>Models:</strong></p>
 <ul>
