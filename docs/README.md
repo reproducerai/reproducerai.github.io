@@ -6,7 +6,7 @@
 ---
 
 ### Goal
-AI papers adopt certain hyperparameters, architectural choices, or learning strategies without really explaining why they work. AI development is still mostly trial and error. I want to explore the fundamentals of AI, so we can make model design and training more deliberate, predictable, and less based on intuition or guesswork.
+AI papers adopt certain hyperparameters, architectural choices, or learning strategies without really explaining why they work. AI development is still trial and error. I want to explore the fundamentals of AI, so we can make model design and training more deliberate, predictable, and less based on intuition or guesswork.
 
 ---
 
