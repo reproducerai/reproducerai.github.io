@@ -11,8 +11,8 @@ Compare an MLP and a Transformer for sequence classification, focusing on how we
 
 <p><strong>Models:</strong></p>
 <ul>
-  <li><strong>MLP (Multi-Layer Perceptron):</strong> Flattened input, one hidden layer with 64 units.</li>
-  <li><strong>Transformer:</strong> Single-layer Transformer with 1 attention head; sequence structure preserved.</li>
+  <li><strong>MLP (Multi-Layer Perceptron):</strong> Flattened input, one or more hidden layers, single output.</li>
+  <li><strong>Transformer:</strong> Single-layer Transformer with one attention head, positional encoding, single output.</li>
 </ul>
 
 <p><strong>Training:</strong> Binary classification to detect the pattern. Optimized with Adam and BCEWithLogitsLoss. Validation threshold tuned for best accuracy.</p>
