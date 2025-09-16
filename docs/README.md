@@ -1,5 +1,5 @@
 ### Purpose
-- Test how different AI architectures, learning strategies, and datasets affect model performance in a simple and easy-to-understand way.
+- Test how different AI architectures, learning strategies, and datasets affect model performance in a easy-to-understand way.
 - Use synthetic datasets in a controlled environment to isolate and understand the impact of each change.
 - Share findings and insights here.
 
