@@ -17,4 +17,6 @@ AI papers often adopt certain hyperparameters, architectural choices, or learnin
 
 ### Journey
 
-[**A Simple Example: Why Transformers Beat MLPs on Long Sequences**](examples/transformers_vs_mlps.html){:target="_blank"}
+<a href="examples/transformers_vs_mlps.html" target="_blank">
+  A Simple Example: Why Transformers Beat MLPs on Long Sequences
+</a>
