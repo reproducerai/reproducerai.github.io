@@ -8,8 +8,8 @@ Compare an MLP and a Transformer for sequence classification
 <h2>Setup</h2>
 <p><strong>Dataset:</strong>
     Sequence of 10 to 100 8d vectors from the normal distribution (mean = 0, std = 1). About half of the sequences (random 50%) contain 3 
-    consecutive embeddings from a different normal distribution (mean = 1, std = 0.5 + tiny noise) at a random position (label = 1) and the
-    rest don't (label = 0).
+    consecutive embeddings from a different normal distribution (mean = 1, std = 0.5 + tiny noise) inserted at a random position. 
+    Sequences containing this 3-vector pattern are labeled 1, and those without it are labeled 0.
 
 
 <p><strong>Models:</strong></p>
