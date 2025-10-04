@@ -5,8 +5,7 @@
 Compare an MLP and a Transformer for sequence classification
 </p>
 
-<h2>Setup</h2>
-<p><strong>Dataset:</strong>
+<h2>Dataset</h2>
 Sequences of length 10, 20, 30, …, up to 100, each consisting of 8-dimensional vectors drawn from a normal distribution (mean = 0, std = 1).
     About half of the sequences (random 50%) contain 3 consecutive embeddings from a different normal distribution
     (mean = 1, std = 0.5 + tiny noise) inserted at a random position. Sequences containing this 3-vector pattern are labeled 1;
@@ -15,8 +14,7 @@ Sequences of length 10, 20, 30, …, up to 100, each consisting of 8-dimensional
 <img src="images/1.1 Transformers vs MLP.png" alt="Dataset illustration: sequences with and without pattern" width="800">
 
 
-
-<p><strong>Models:</strong></p>
+<h2>Models</h2>
 <ul>
   <li><strong>MLP (Multi-Layer Perceptron)</strong></li>
   <li><strong>Self-Attention + MLP (Multi-Layer Perceptron)</strong></li>
@@ -25,7 +23,10 @@ Sequences of length 10, 20, 30, …, up to 100, each consisting of 8-dimensional
 <img src="images/1.2 Transformers vs MLP new.png" alt="MLP architecture" width="1200">
 
 
-<p><strong>Training:</strong> Binary classification to detect the pattern. Optimized with Adam and BCEWithLogitsLoss. Validation threshold tuned for best accuracy.</p>
+<h2>Training</h2>
+<p>
+  Binary classification to detect the pattern. Optimized with Adam and BCEWithLogitsLoss. Validation threshold tuned for best accuracy.
+</p>
 
 <h2>Findings</h2>
 <ul>
