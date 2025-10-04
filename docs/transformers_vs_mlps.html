@@ -6,16 +6,26 @@ Compare an MLP and a Transformer for sequence classification
 </p>
 
 <h2>Dataset</h2>
+<ul>
   <li>
     <p><strong>Definition</strong></p>
     Sequences of length 10, 20, 30, …, up to 100, each consisting of 8-dimensional vectors drawn from a normal distribution (mean = 0, std = 1).
     About half of the sequences (random 50%) contain 3 consecutive embeddings from a different normal distribution
     (mean = 1, std = 0.5 + tiny noise) inserted at a random position. Sequences containing this 3-vector pattern are labeled 1;
     those without it are labeled 0.
-
-    <p><strong>Distribution</strong></p>
-    10000, 1500, 1500
   </li>
+  <li>
+    <p><strong>Distribution</strong></p>
+    <div>Train: Shape 10000x8, Positive/Negative: (4969, 5031)</div>
+    <div>Validation: Shape 1500x8, Positive/Negative: (733, 767)</div>
+    <div>Test: Shape 1500x8, Positive/Negative: (782, 718)</div>
+  </li>
+</ul>
+
+
+Positive/Negative Samples: (733, 767)
+Positive/Negative Samples: (782, 718)
+Training MLP:
 
 <img src="images/1.1 Transformers vs MLP.png" alt="Dataset illustration: sequences with and without pattern" width="800">
 
