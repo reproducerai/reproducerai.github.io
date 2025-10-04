@@ -18,8 +18,8 @@ Sequences of length 10, 20, 30, …, up to 100, each consisting of 8-dimensional
 
 <p><strong>Models:</strong></p>
 <ul>
-  <li><strong>MLP (Multi-Layer Perceptron):</strong> Flattened input, one or more hidden layers, single output.</li>
-  <li><strong>Transformer:</strong> Single-layer Transformer with one attention head, positional encoding, single output.</li>
+  <li><strong>MLP (Multi-Layer Perceptron)</strong></li>
+  <li><strong>Self-Attention + MLP (Multi-Layer Perceptron)</strong></li>
 </ul>
 
 <img src="images/1.2 Transformers vs MLP new.png" alt="MLP architecture" width="1200">
@@ -29,18 +29,12 @@ Sequences of length 10, 20, 30, …, up to 100, each consisting of 8-dimensional
 
 <h2>Findings</h2>
 <ul>
-  <li>For short sequences (seq_len=10), both MLP and Transformer achieve high accuracy (~97–98%).</li>
-  <li>For longer sequences (seq_len=100), the Transformer significantly outperforms the MLP:
-    <ul>
-      <li>MLP struggles (~55–60% accuracy) because flattening destroys positional information and the pattern signal is diluted.</li>
-      <li>Transformer maintains strong performance (~80–85%) by attending to pattern positions across the sequence.</li>
-    </ul>
-  </li>
+  <li>For short sequences (seq_len=10), both MLP and Self-Attention+MLP achieve high accuracy.</li>
+  <li>For longer sequences (seq_len=100), the Self-Attention+MLP outperforms the MLP.</li>
 </ul>
 
 <h2>Conclusion</h2>
 <ul>
   <li>MLPs work well for short sequences but fail as sequences grow longer and sparser.</li>
-  <li>Transformers handle long sequences effectively by capturing sequence structure and focusing on relevant positions.</li>
-  <li>This simple example illustrates why attention-based architectures are preferred for sequence data.</li>
+  <li>Self-Attention+MLP  handle long sequences effectively by capturing sequence structure and focusing on relevant positions.</li>
 </ul>
