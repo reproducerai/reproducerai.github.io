@@ -2,12 +2,15 @@
 
 <h2>Objective</h2>
 <p>
-Compare an MLP and a Transformer for sequence classification, focusing on how well each detects patterns in sequences of different lengths.
+Compare an MLP and a Transformer for sequence classification
 </p>
 
 <h2>Setup</h2>
-<p><strong>Dataset:</strong> Synthetic sequences of varying lengths (10 to 100, in steps of 10), each position represented by an 8-dimensional embedding. 
-    Some sequences contain a small pattern—these are labeled <strong>1</strong>; sequences without the pattern are labeled <strong>0</strong>.</p>
+<p><strong>Dataset:</strong>
+    Sequence of 10 to 100 8d vectors from the normal distribution (mean = 0, std = 1). About half of the sequences (random 50%) contain 3 
+    consecutive embeddings from a different normal distribution (mean = 1, std = 0.5 + tiny noise) at a random position (label = 1) and the
+    rest don't (label = 0).
+
 
 <p><strong>Models:</strong></p>
 <ul>
