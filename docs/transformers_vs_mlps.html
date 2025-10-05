@@ -1,59 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MLP vs Self-Attention+MLP Experiment</title>
+  <style>
+    /* Base font size and line height */
+    body {
+      font-size: 18px;
+      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      color: #222;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      margin-top: 1.2em;
+      margin-bottom: 0.3em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    ul {
+      margin-bottom: 1em;
+    }
+
+    li {
+      margin-bottom: 0.5em;
+    }
+
+    img {
+      display: block;
+      margin: 1em auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    strong {
+      color: #444;
+    }
+
+    .dataset-info ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .dataset-info ul li {
+      margin-bottom: 0.3em;
+    }
+  </style>
+</head>
+<body>
+
 <h1>Experiment: MLP vs Self-Attention+MLP on Sequence Data</h1>
 
 <h2>Objective</h2>
-<p>
-Compare an MLP and a Self-Attention+MLP for a simple sequence classification.
-</p>
+<p>Compare an MLP and a Self-Attention+MLP for a simple sequence classification task.</p>
 
 <h2>Dataset</h2>
-<ul>
+<ul class="dataset-info">
   <li>
     <p><strong>Definition</strong></p>
-    Sequences of length 10, 20, 30, …, up to 100, each consisting of 8-dimensional vectors drawn from a normal distribution (mean = 0, std = 1).
-    About half of the sequences (random 50%) contain 3 consecutive embeddings from a different normal distribution
-    (mean = 1, std = 0.5 + tiny noise) inserted at a random position. Sequences containing this 3-vector pattern are labeled 1;
-    those without it are labeled 0.
+    Sequences of length 10, 20, 30, …, up to 100, each consisting of 8-dimensional vectors drawn from a normal distribution (mean = 0, std = 1). About half of the sequences (random 50%) contain 3 consecutive embeddings from a different normal distribution (mean = 1, std = 0.5 + tiny noise) inserted at a random position. Sequences containing this 3-vector pattern are labeled 1; those without it are labeled 0.
   </li>
-<li>
-  <p><strong>Shape and Distribution</strong></p>
-  <ul>
-    <li>Train: Shape 10000 × sequence_length × 8, Positive/Negative: (4969, 5031)</li>
-    <li>Validation: Shape 1500 × sequence_length × 8, Positive/Negative: (733, 767)</li>
-    <li>Test: Shape 1500 × sequence_length × 8, Positive/Negative: (782, 718)</li>
-  </ul>
-</li>
+  <li>
+    <p><strong>Shape and Distribution</strong></p>
+    <ul>
+      <li>Train: Shape 10000 × sequence_length × 8, Positive/Negative: (4969, 5031)</li>
+      <li>Validation: Shape 1500 × sequence_length × 8, Positive/Negative: (733, 767)</li>
+      <li>Test: Shape 1500 × sequence_length × 8, Positive/Negative: (782, 718)</li>
+    </ul>
+  </li>
 </ul>
 
-<img src="images/1.1 Transformers vs MLP.png" alt="Dataset illustration: sequences with and without pattern" width="800">
-
+<img src="images/1.1 Transformers vs MLP.png" alt="Dataset illustration: sequences with and without pattern">
 
 <h2>Models</h2>
 <ul>
-  <li><strong>MLP (Multi-Layer Perceptron): </strong>(53761 trainable paremeters)</li>
-  <li><strong>Self-Attention + MLP (Multi-Layer Perceptron): </strong>(54049 trainable parameters)</li>
+  <li><strong>MLP (Multi-Layer Perceptron)</strong>: 53,761 trainable parameters</li>
+  <li><strong>Self-Attention + MLP</strong>: 54,049 trainable parameters</li>
 </ul>
 
-<img src="images/1.2 Transformers vs MLP new.png" alt="MLP architecture" width="1200">
-
+<img src="images/1.2 Transformers vs MLP new.png" alt="MLP architecture">
 
 <h2>Training</h2>
-<p>
-  <ul>
-    <li>Task: Binary classification.</li>
-    <li>Optimizer: Adam, initial learning rate = 1e-4, all other settings default.</li>
-    <li>Loss: BCEWithLogitsLoss, default settings.</li>
-    <li>Training: 25 epochs.</li>
-  </ul>
-</p>
+<ul>
+  <li>Task: Binary classification.</li>
+  <li>Optimizer: Adam, initial learning rate = 1e-4, all other settings default.</li>
+  <li>Loss: BCEWithLogitsLoss, default settings.</li>
+  <li>Training duration: 25 epochs.</li>
+</ul>
 
 <h2>Findings</h2>
 <ul>
-  <li>For short sequences (seq_len=10), both MLP and Self-Attention+MLP achieve high accuracy.</li>
-  <li>For longer sequences (seq_len=100), the Self-Attention+MLP outperforms the MLP.</li>
+  <li>For short sequences (seq_len = 10), both MLP and Self-Attention+MLP achieve high accuracy.</li>
+  <li>For longer sequences (seq_len = 100), Self-Attention+MLP outperforms MLP significantly.</li>
 </ul>
 
 <h2>Conclusion</h2>
 <ul>
   <li>MLPs work well for short sequences but fail as sequences grow longer and sparser.</li>
-  <li>Self-Attention+MLP  handle long sequences effectively by capturing sequence structure and focusing on relevant positions.</li>
+  <li>Self-Attention+MLP handles long sequences effectively by capturing sequence structure and focusing on relevant positions.</li>
 </ul>
+
+</body>
+</html>
