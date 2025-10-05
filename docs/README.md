@@ -1,5 +1,5 @@
 ### Purpose
-The purpose of this project is to test how different AI architectures, learning strategies, and datasets affect model performance by using synthetic datasets in a controlled environment. All findings are shared here.
+The purpose of this project is to test how different AI architectures, learning strategies, and dataset designs influence model performance by using synthetic datasets in a controlled environment. All findings are shared here.
 
 ---
 
