@@ -4,9 +4,7 @@ The purpose of this project is to test how different AI architectures, learning 
 ---
 
 ### Connect
-- [LinkedIn](https://www.linkedin.com/in/minhaj-uddin-ansari-040573160/) 
-- [Twitter/X](https://x.com/minhajansari_) 
-- reproducerai@gmail.com
+[LinkedIn](https://www.linkedin.com/in/minhaj-uddin-ansari-040573160/), [Twitter/X](https://x.com/minhajansari_), reproducerai@gmail.com
 
 ---
 
