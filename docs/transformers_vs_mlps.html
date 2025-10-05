@@ -84,9 +84,9 @@
   <li>
     <p><strong>Shape and Distribution</strong></p>
     <ul>
-      <li>Train: Shape 10000 × sequence_length × 8, Positive/Negative: (4969, 5031)</li>
-      <li>Validation: Shape 1500 × sequence_length × 8, Positive/Negative: (733, 767)</li>
-      <li>Test: Shape 1500 × sequence_length × 8, Positive/Negative: (782, 718)</li>
+      <li>Train: Shape 10000 × sequence_length × 8, 1/0 Count: (4969, 5031)</li>
+      <li>Validation: Shape 1500 × sequence_length × 8, 1/0 Count: (733, 767)</li>
+      <li>Test: Shape 1500 × sequence_length × 8, 1/0 Count: (782, 718)</li>
     </ul>
   </li>
 </ul>
@@ -119,7 +119,7 @@
 
 <h2>Conclusion and Code</h2>
 <ul>
-  <li>MLPs work well for short sequences but fail as sequences grow longer and sparser.</li>
+  <li>MLPs work well for short sequences but fail as sequences grow longer.</li>
   <li>Self-Attention+MLP handles long sequences effectively by capturing sequence structure and focusing on relevant positions.</li>
   <li>
     <strong>Code:</strong>
