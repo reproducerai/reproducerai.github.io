@@ -78,12 +78,11 @@
 <h2>Dataset</h2>
 <ul class="dataset-info">
   <li>
-    <p><strong>Definition</strong></p>
-        We generate sequences of length <i>S</i>, where each element is an 8-dimensional vector. For approximately half of the sequences (randomly selected 50%), we insert three consecutive vectors drawn from a different normal distribution (mean = 1, std = 0.5 + small noise) at a random position within the sequence. The remaining <i>S − 3</i> vectors are sampled from a standard normal distribution (mean = 0, std = 1).
-      <ul>
-        <li>Sequences with this 3-vector pattern are labeled 1</li>
-        <li>Sequences without it are labeled 0</li>
-      </ul>
+    We generate sequences of length <i>S</i>, where each element is an 8-dimensional vector.
+    For approximately half of the sequences (randomly selected 50%), we insert three consecutive vectors drawn from a normal distribution (mean = 1, std = 0.5 + small noise) at a random position within the sequence.
+    The remaining <i>S − 3</i> vectors in those sequences are sampled from a standard normal distribution (mean = 0, std = 1).
+    For the other half (without the inserted pattern), all <i>S</i> vectors are sampled from the standard normal distribution.
+    Sequences containing the 3-vector pattern are labeled 1, and sequences without it are labeled 0.
   </li>
   <li>
     <p><strong>Shape and Distribution</strong></p>
