@@ -13,5 +13,5 @@ The purpose of this project is to test how different AI architectures, learning 
 ### Journey
 
 <a href="transformers_vs_mlps.html" target="_blank">
-  A Simple Example: Why Transformers Beat MLPs on Long Sequences
+  Comparing MLP and Self-Attention+MLP: A Minimal Example
 </a>
