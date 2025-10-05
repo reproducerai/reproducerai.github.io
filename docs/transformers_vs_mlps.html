@@ -1,8 +1,8 @@
-<h1>Experiment: Transformers vs MLPs on Sequence Data</h1>
+<h1>Experiment: MLP vs Self-Attention+MLP on Sequence Data</h1>
 
 <h2>Objective</h2>
 <p>
-Compare an MLP and a Transformer for sequence classification
+Compare an MLP and a Self-Attention+MLP for a simple sequence classification.
 </p>
 
 <h2>Dataset</h2>
@@ -38,7 +38,12 @@ Compare an MLP and a Transformer for sequence classification
 
 <h2>Training</h2>
 <p>
-  Binary classification to detect the pattern. Optimized with Adam and BCEWithLogitsLoss. Validation threshold tuned for best accuracy.
+  <ul>
+    <li>Task: Binary classification.</li>
+    <li>Optimizer: Adam, initial learning rate = 1e-4, all other settings default.</li>
+    <li>Loss: BCEWithLogitsLoss, default settings.</li>
+    <li>Training: 25 epochs.</li>
+  </ul>
 </p>
 
 <h2>Findings</h2>
