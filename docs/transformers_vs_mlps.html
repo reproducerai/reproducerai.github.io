@@ -139,9 +139,9 @@
 
 <p>
   In our experiment, each token embedding is represented as an 8-dimensional vector in the sequence.
-  We visualize the attention weights as a heatmap, showing how the model’s focus shifts when we manually move a predefined motif in the sequence.
-  When a column in the heatmap is bright, this means many query tokens are looking at the same key token.
-  Since the motif length is 3, we observe <b>three bright columns</b> corresponding to the three tokens of the motif.
+  We visualize the attention weights using a heatmap to illustrate how the model’s focus shifts when we manually move the insertion point of a predefined motif.
+  Bright columns in the heatmap indicate that many query tokens are attending to the same key token.
+  Since the motif consists of three tokens, we observe three bright columns corresponding to these motif positions.
 </p>
  
 <img src="images/attention_evolution.gif" alt="Attention GIF" width="800">
