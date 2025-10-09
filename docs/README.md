@@ -1,5 +1,5 @@
 ### Purpose
-The purpose of this project is to create minimal examples to appreciate how different AI architectures, learning strategies, and dataset designs influence model performance. 
+Creating minimal examples to appreciate how different AI architectures, learning strategies, and dataset designs influence model performance. 
 
 ---
 
