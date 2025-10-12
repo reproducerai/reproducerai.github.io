@@ -12,7 +12,7 @@ Creating minimal examples to appreciate how different AI architectures, learning
 
 ### Journey
 
-<div style="display: flex; gap: 10px;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
 <a href="transformers_vs_mlps.html" target="_blank">
   Comparing MLP and Self-Attention+MLP: A Minimal Example
 </a>
