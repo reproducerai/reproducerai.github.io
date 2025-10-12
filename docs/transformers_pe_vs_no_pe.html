@@ -143,8 +143,8 @@
  
 <h2>Conclusion and Code</h2>
 <ul>
-  <li>MLPs work well for short sequences but fail as sequences grow longer.</li>
-  <li>Self-Attention+MLP handles long sequences effectively by capturing sequence structure and focusing on relevant positions.</li>
+  <li>Self-Attention + MLP without positional encoding performs well on short sequences, where sequence order has minimal influence and the model can rely solely on feature similarity between input vectors.</li>
+  <li>Self-Attention+MLP with PE handles long sequences effectively by capturing sequence structure and focusing on relevant positions.</li>
   <li>
     <strong>Code:</strong>
     <a href="https://colab.research.google.com/drive/1-3PyxGslKZBU36QRVoTZ4j9exfWYso0V?usp=sharing" target="_blank" style="text-decoration:none;">
