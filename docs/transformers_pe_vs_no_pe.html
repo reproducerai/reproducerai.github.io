@@ -70,18 +70,20 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
 </a>
 
-<h1>Experiment: MLP vs Self-Attention+MLP on Sequence Data</h1>
+<h1>Experiment: Positional Encoding vs No Positional Encoding for Self-Attention</h1>
 
 <h2>Objective</h2>
-<p>Compare an MLP and Self-Attention+MLP for a simple sequence classification task.</p>
+<p>Compare a Self-Attention+MLP with and without Positional Encoding for a simple sequence classification task.</p>
 
 <h2>Dataset</h2>
 <ul class="dataset-info">
   <li>
     <p><strong>Definition</strong></p>
-    We generate sequences of length <i>S</i>, where each element is an 8-dimensional vector sampled from a standard normal distribution (mean = 0, std = 1).
-    For approximately half of the sequences, we insert a motif at a random position: three consecutive vectors sampled from a normal distribution (mean = 1, standard deviation = 0.5), with small additive noise drawn from N(0,0.1).
-    Sequences containing a motif are labeled 1, while sequences without a motif are labeled 0.
+    We generate sequences of length <i>S</i>, where each element is an 8-dimensional vector.
+    For approximately half of the sequences, we insert three consecutive vectors (motif) at a random position within the sequence. These vectors are sampled from a normal distribution (mean = 1, std = 0.5), with an added small noise term sampled from N(mean = 0, std = 0.1).
+    The remaining <i>S − 3</i> vectors in those sequences are sampled from a standard normal distribution (mean = 0, std = 1).
+    For the other half (without the inserted pattern), all <i>S</i> vectors are sampled from the standard normal distribution.
+    Sequences containing a motif are labeled 1, and sequences without it are labeled 0.
   </li>
   <li>
     <p><strong>Shape and Distribution</strong></p>
