@@ -73,7 +73,7 @@
 <h1>Experiment: Positional Encoding vs No Positional Encoding for Self-Attention</h1>
 
 <h2>Objective</h2>
-<p>Compare a Self-Attention+MLP with and without Positional Encoding for a simple sequence classification task.</p>
+<p>Compare a Self-Attention+MLP with and without a fixed sinusoidal positional encoding for a simple sequence classification task.</p>
 
 <h2>Dataset</h2>
 <ul class="dataset-info">
@@ -98,8 +98,8 @@
 
 <h2>Models</h2>
 <ul>
-  <li><strong>Self-Attention + MLP (With Positional Encoding)</strong>: 6,177,569 trainable parameters</li>
-  <li><strong>Self-Attention + MLP (Without Positional Encoding)</strong>: 6,177,569 trainable parameters</li>
+  <li><strong>Self-Attention + MLP (With Fixed Sinusoidal PE)</strong>: 6,177,569 trainable parameters</li>
+  <li><strong>Self-Attention + MLP (Without Fixed Sinusoidal PE)</strong>: 6,177,569 trainable parameters</li>
 </ul>
 
 <img src="images/1.2 Transformers vs MLP.png" alt="MLP architecture">
