@@ -14,7 +14,7 @@ Creating minimal examples to appreciate how different AI architectures, learning
 
 <div style="display: flex; flex-direction: column; gap: 10px;">
 <a href="transformers_vs_mlps.html" target="_blank">
-  MLP and Self-Attention+MLP: A Minimal Example
+  MLP vs Self-Attention+MLP: A Minimal Example
 </a>
 <a href="transformers_pe_vs_no_pe.html" target="_blank">
   Positional Encoding vs. No Positional Encoding: A Minimal Example
