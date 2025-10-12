@@ -80,7 +80,7 @@
   <li>
     <p><strong>Definition</strong></p>
     We generate sequences of length <i>S</i>, where each element is an 8-dimensional vector sampled from a standard normal distribution (mean = 0, std = 1).
-    For approximately half of the sequences, we insert a motif at a random position: three consecutive vectors sampled from a normal distribution (mean = 1, standard deviation = 0.5), with small additive noise drawn from N(0,0.1).
+    For approximately half of the sequences, we replace three consecutive vectors at a random position with a motif: vectors sampled from a normal distribution (mean = 1, standard deviation = 0.5), with small additive noise drawn from N(0,0.1).
     Sequences containing a motif are labeled 1, while sequences without a motif are labeled 0.
   </li>
   <li>
