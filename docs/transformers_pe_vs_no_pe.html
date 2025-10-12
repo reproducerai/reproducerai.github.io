@@ -79,21 +79,21 @@
 <ul class="dataset-info">
   <li>
     <p><strong>Definition</strong></p>
-    We generate sequences of length <i>S</i>, where each element is an 8-dimensional vector sampled from a standard normal distribution (mean = 0, std = 1).
-    For approximately half of the sequences, we replace three consecutive vectors at a random position with a motif: vectors sampled from a normal distribution (mean = 1, standard deviation = 0.5), with small additive noise drawn from N(0,0.1).
-    Sequences containing a motif are labeled 1, while sequences without a motif are labeled 0.
+    We generate sequences of length <i>3000</i>, where each element is an 8-dimensional vector sampled from a normal distribution (mean = 0, std = 0.5).
+    For approximately half of the sequences, we replace four consecutive vectors at a random position with a motif: vectors [3,-3,3,-3] * np.linspace(1.0, 0.2, 8).
+    Sequences containing a motif in the first half are labeled 0, while sequences containing a motif in the second half are labeled 1.
   </li>
   <li>
     <p><strong>Shape and Distribution</strong></p>
     <ul>
-      <li>Train: Shape 10000 × <i>S</i> × 8, Count 1/0: (4969, 5031)</li>
-      <li>Validation: Shape 1500 × <i>S</i> × 8, Count 1/0: (733, 767)</li>
-      <li>Test: Shape 1500 × <i>S</i> × 8, Count 1/0: (782, 718)</li>
+      <li>Train: Shape 5000 × <i>S</i> × 8, Count 1/0: (2503, 2497)</li>
+      <li>Validation: Shape 1000 × <i>S</i> × 8, Count 1/0: (501, 499)</li>
+      <li>Test: Shape 1000 × <i>S</i> × 8, Count 1/0: (492, 508)</li>
     </ul>
   </li>
 </ul>
 
-<img src="images/1.1 Transformers vs MLP new.png" alt="Dataset illustration">
+<img src="images/2.1 PE vs No PE.png" alt="Dataset illustration">
 
 <h2>Models</h2>
 <ul>
