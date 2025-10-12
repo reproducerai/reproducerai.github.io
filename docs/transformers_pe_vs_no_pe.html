@@ -144,7 +144,7 @@
 <h2>Conclusion and Code</h2>
 <ul>
   <li>Self-Attention + MLP without positional encoding performs well on short sequences, where sequence order has minimal influence and the model can rely solely on feature similarity between input vectors.</li>
-  <li>Self-Attention+MLP with PE handles long sequences effectively by capturing sequence structure and focusing on relevant positions.</li>
+  <li>Self-Attention + MLP with positional encoding performs better on long sequences, where positional information helps capture order-dependent patterns and preserve performance as sequence length increases.</li>
   <li>
     <strong>Code:</strong>
     <a href="https://colab.research.google.com/drive/1-3PyxGslKZBU36QRVoTZ4j9exfWYso0V?usp=sharing" target="_blank" style="text-decoration:none;">
