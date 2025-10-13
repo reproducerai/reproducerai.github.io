@@ -1,5 +1,5 @@
 ### Purpose
-Creating minimal examples to appreciate how different AI architectures, learning strategies, and dataset designs influence model performance. 
+Creating minimal empirical examples to appreciate how different AI architectures, learning strategies, and dataset designs influence model performance.
 
 ---
 
