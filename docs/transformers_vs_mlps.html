@@ -117,6 +117,7 @@
 <ul>
   <li>For short sequences, both MLP and Self-Attention+MLP achieve high accuracy.</li>
   <li>For longer sequences, Self-Attention+MLP outperforms MLP significantly.</li>
+  <li>Self-attention+MLP helps the model understand long sequences by focusing on the important positions and patterns in a sequence.</li>
   <li>Adding more hidden layers to the MLP (from [256, 128] to [256, 128, 128]) OR sweeping the initial learning rate across {1e-6, 1e-5, 1e-4, 1e-3} for 100 epochs did not yield any performance improvement on sequence of max length 100.</li>
 </ul>
 
@@ -141,17 +142,10 @@
 <img src="images/attention_evolution_new.gif" alt="Attention GIF" width="800">
 
  
-<h2>Conclusion and Code</h2>
-<ul>
-  <li>MLPs work well for short sequences but fail as sequences grow longer.</li>
-  <li>Self-Attention+MLP handles long sequences effectively by capturing sequence structure and focusing on relevant positions.</li>
-  <li>
-    <strong>Code:</strong>
-    <a href="https://colab.research.google.com/drive/1-3PyxGslKZBU36QRVoTZ4j9exfWYso0V?usp=sharing" target="_blank" style="text-decoration:none;">
-      Open in Google Colab
-    </a>
-  </li>
-</ul>
+<h2>Code</h2>
+<a href="https://colab.research.google.com/drive/1-3PyxGslKZBU36QRVoTZ4j9exfWYso0V?usp=sharing" target="_blank" style="text-decoration:none;">
+  Open in Google Colab
+</a>
 
 </body>
 </html>
