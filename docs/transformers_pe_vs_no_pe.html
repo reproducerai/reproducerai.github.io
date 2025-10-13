@@ -81,7 +81,7 @@
     <p><strong>Definition</strong></p>
     We generate 7000 sequences (Train: 5000; Validation: 1000; Test: 1000), each consisting of <i>S</i> vectors.
     Each vector is 8-dimensional and sampled from a standard normal distribution (mean = 0, standard deviation = 0.5).
-    For approximately half of the sequences, we replace four consecutive vectors at a random position with a motif: four 8-dimensional vectors formed by scaling a linearly decaying vector np.linspace(1.0, 0.2, 8) by alternating scaling factors [3, -3, 3, -3].
+    For approximately half of the sequences, we replace four consecutive vectors at a random position with a motif: four vectors formed by scaling a linearly decaying vector np.linspace(1.0, 0.2, 8) by alternating scaling factors [3, -3, 3, -3].
     Sequences containing a motif in the first half are labeled 0, while sequences containing a motif in the second half are labeled 1.
     This dataset is position-dependent, as the label depends not only on the location of the motif but also on the specific [3, −3, 3, −3] pattern in that order.
   </li>
