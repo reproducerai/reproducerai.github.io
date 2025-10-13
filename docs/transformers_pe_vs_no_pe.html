@@ -121,7 +121,88 @@
   <li>For longer sequences, only the Self-Attention+MLP model <strong>with</strong> PE converges, while the model <strong>without</strong> PE fails to converge.</li> <!-- <li>Sweeping the initial learning rate across {1e-6, 1e-5, 1e-4, 1e-3} for 100 epochs did not yield any performance improvement on sequence of max length 3000.</li> -->
 </ul>
 
-<img src="images/1.3 Transformers vs MLP new.png" alt="Results" width="800">
+<!-- Modern Centered Table -->
+<table style="
+    border-collapse: collapse;
+    width: 60%;
+    text-align: center;
+    margin: 2em auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+">
+  <thead>
+    <tr style="background-color: #800080; color: white; font-weight: bold;">
+      <th style="padding: 12px 8px;">Sequence Length</th>
+      <th style="padding: 12px 8px;">Self-Attention + MLP (PE)</th>
+      <th style="padding: 12px 8px;">Self-Attention + MLP (No PE)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: #f2f2f2; transition: background 0.3s;">
+      <td style="padding: 10px;">250</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">✅</td>
+    </tr>
+    <tr style="transition: background 0.3s;">
+      <td style="padding: 10px;">500</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">✅</td>
+    </tr>
+    <tr style="background-color: #f2f2f2; transition: background 0.3s;">
+      <td style="padding: 10px;">750</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">✅</td>
+    </tr>
+    <tr style="transition: background 0.3s;">
+      <td style="padding: 10px;">1000</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">✅</td>
+    </tr>
+    <tr style="background-color: #f2f2f2; transition: background 0.3s;">
+      <td style="padding: 10px;">1250</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="transition: background 0.3s;">
+      <td style="padding: 10px;">1500</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="background-color: #f2f2f2; transition: background 0.3s;">
+      <td style="padding: 10px;">1750</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="transition: background 0.3s;">
+      <td style="padding: 10px;">2000</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="background-color: #f2f2f2; transition: background 0.3s;">
+      <td style="padding: 10px;">2250</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="transition: background 0.3s;">
+      <td style="padding: 10px;">2500</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="background-color: #f2f2f2; transition: background 0.3s;">
+      <td style="padding: 10px;">2750</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="transition: background 0.3s;">
+      <td style="padding: 10px;">3000</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+  </tbody>
+</table>
+
 
 <h2>Interpretability</h2>
 
