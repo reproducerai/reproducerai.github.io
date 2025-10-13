@@ -116,9 +116,9 @@
 
 <h2>Findings</h2>
 <ul>
-  <li>For short sequences, both Self-Attention+MLP with and without PE achieve high accuracy.</li>
-  <li>For longer sequences, Self-Attention+MLP with PE outperforms Self-Attention+MLP without PE significantly.</li>
-  <li>Sweeping the initial learning rate across {1e-6, 1e-5, 1e-4, 1e-3} for 100 epochs did not yield any performance improvement on sequence of max length 3000.</li>
+  <li><strong>Within our experimental setup:</strong></li>
+  <li>For short sequences, both Self-Attention+MLP models—with and without positional encoding (PE)—successfully converge, achieving high validation and test accuracy.</li>
+  <li>For longer sequences, only the Self-Attention+MLP model <strong>with</strong> PE converges, while the model <strong>without</strong> PE fails to converge.</li> <!-- <li>Sweeping the initial learning rate across {1e-6, 1e-5, 1e-4, 1e-3} for 100 epochs did not yield any performance improvement on sequence of max length 3000.</li> -->
 </ul>
 
 <img src="images/1.3 Transformers vs MLP new.png" alt="Results" width="800">
