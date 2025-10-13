@@ -136,11 +136,11 @@
   <li><b>Attention weights:</b> Computed as <code>softmax(QK<sup>T</sup> / √d<sub>k</sub>)</code>, telling how much each token should attend to others.</li>
   <li><b>Output:</b> The new token representation is a weighted sum of the value vectors according to attention weights.</li>
 </ul>
-
 <p>
   In this figure, we visualize the attention weights as a heatmap to show how the model’s focus changes when the insertion point of a predefined motif is manually shifted along a sequence of length 100 8-dimensional vectors.
   The three shifting bright columns indicate that the query tokens are attending to the three key tokens corresponding to the motif. 
-<img src="images/attention_evolution_new.gif" alt="Attention GIF" width="800">
+</p>
+<img src="images/1.4 attention_heatmap.gif" alt="Attention GIF" width="800">
 
  
 <h2>Code</h2>
