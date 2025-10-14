@@ -79,7 +79,7 @@
 <ul class="dataset-info">
   <li>
     <p><strong>Definition</strong></p>
-    We generate 13,000 sequences (Train: 10,000; Validation: 1500; Test: 1500), each consisting of <i>S</i> vectors. 
+    We generate 13,000 sequences (Train: 10,000; Validation: 1500; Test: 1500), each consisting of <i>S</i> vectors (sequence length). 
     Each vector is 8-dimensional and sampled from a standard normal distribution (mean = 0, standard deviation = 1).
     For approximately half of the sequences, we replace three consecutive vectors at a random position with a motif: vectors sampled from a normal distribution (mean = 1, standard deviation = 0.5), with small additive noise drawn from N(mean = 0, standard deviation = 0.1).
     Sequences containing a motif are labeled 1, while sequences without a motif are labeled 0.
