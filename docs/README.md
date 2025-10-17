@@ -17,7 +17,10 @@ Creating minimal empirical examples to appreciate how different AI architectures
   MLP vs Self-Attention+MLP: A Minimal Example
 </a>
 <a href="transformers_pe_vs_no_pe.html" target="_blank">
-  Positional Encoding vs. No Positional Encoding: A Minimal Example
+  Positional Encoding vs No Positional Encoding: A Minimal Example
+</a>
+<a href="shared_vs_separate.html" target="_blank">
+  Separate Wq, Wk, Wv vs Shared Wq = Wk = Wv Projection Matrices: A Minimal Example
 </a>
 </div>
 

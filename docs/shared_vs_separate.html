@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Positional Encoding vs. No Positional Encoding</title>
+  <style>
+    /* Base font size and line height */
+    body {
+      font-size: 18px;
+      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      color: #222;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      margin-top: 1.2em;
+      margin-bottom: 0.3em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    ul {
+      margin-bottom: 1em;
+    }
+
+    li {
+      margin-bottom: 0.5em;
+    }
+
+    img {
+      display: block;
+      margin: 1em auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    strong {
+      color: #444;
+    }
+
+    .dataset-info ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .dataset-info ul li {
+      margin-bottom: 0.3em;
+    }
+  </style>
+</head>
+<body>
+
+<a href="https://colab.research.google.com/drive/1-3PyxGslKZBU36QRVoTZ4j9exfWYso0V?usp=sharing" target="_blank" style="text-decoration:none;">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
+</a>
+
+<h1>Experiment: Positional Encoding vs No Positional Encoding for Self-Attention</h1>
+
+<h2>Objective</h2>
+<p>Compare a Self-Attention+MLP with and without a fixed sinusoidal positional encoding for a simple sequence classification task.</p>
+
+<h2>Dataset</h2>
+<ul class="dataset-info">
+  <li>
+    <p><strong>Definition</strong></p>
+    We generate 7000 sequences (Train: 5000; Validation: 1000; Test: 1000), each consisting of <i>S</i> vectors (sequence length).
+    Each vector is 8-dimensional and sampled from a standard normal distribution (mean = 0, standard deviation = 0.5).
+    For approximately half of the sequences, we replace four consecutive vectors at a random position with a motif: four vectors formed by scaling a linearly decaying vector np.linspace(1.0, 0.2, 8) by alternating scaling factors [3, -3, 3, -3].
+    Sequences containing a motif in the first half are labeled 0, while sequences containing a motif in the second half are labeled 1.
+    This dataset is position-dependent, as the label depends not only on the location of the motif but also on the specific [3, −3, 3, −3] pattern in that order.
+  </li>
+  <li>
+    <p><strong>Shape and Distribution</strong></p>
+    <ul>
+      <li>Train: Shape 5000 × <i>S</i> × 8, Count 1/0: (2503, 2497)</li>
+      <li>Validation: Shape 1000 × <i>S</i> × 8, Count 1/0: (501, 499)</li>
+      <li>Test: Shape 1000 × <i>S</i> × 8, Count 1/0: (492, 508)</li>
+    </ul>
+  </li>
+</ul>
+
+<img src="images/2.1 PE vs No PE.png" alt="Dataset illustration">
+
+<h2>Models</h2>
+<ul>
+  <li><strong>Self-Attention + MLP (With Fixed Sinusoidal PE)</strong></li>
+  <li><strong>Self-Attention + MLP (Without Fixed Sinusoidal PE)</strong></li>
+</ul>
+
+<img src="images/2.2 PE vs No PE.png" alt="MLP architecture">
+
+<h2>Training</h2>
+<ul>
+  <li>Comparison of Self-Attention+MLP with and without PE for binary classification across sequences of varying lengths.</li>
+  <li>Optimizer: Adam, initial learning rate = 1e-4, all other settings default.</li>
+  <li>Loss: BCEWithLogitsLoss, default settings.</li>
+  <li>Training duration: 50 epochs.</li>
+  <li>Weights are initalized identically in both models.</li>
+</ul>
+
+<h2>Findings</h2>
+<ul>
+  <li><strong>Within our experimental setup:</strong></li>
+  <li>For short sequences, both Self-Attention+MLP models—with and without positional encoding (PE)—successfully converge, achieving high validation and test accuracy.</li>
+  <li>For longer sequences, only the Self-Attention+MLP model <strong>with</strong> PE converges, while the model <strong>without</strong> PE fails to converge.</li> <!-- <li>Sweeping the initial learning rate across {1e-6, 1e-5, 1e-4, 1e-3} for 100 epochs did not yield any performance improvement on sequence of max length 3000.</li> -->
+</ul>
+
+<p style="text-align: center; font-size: 1.1em;">
+  ✅ : Model converges successfully &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; ❌ : Model fails to converge within 50 epochs
+</p>
+<!-- Modern Centered Table -->
+<table style="
+    border-collapse: collapse;
+    width: 60%;
+    text-align: center;
+    margin: 2em auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+">
+  <thead>
+    <tr style="background-color: #800080; color: white; font-weight: bold;">
+      <th style="padding: 12px 8px;">Sequence Length</th>
+      <th style="padding: 12px 8px;">Self-Attention + MLP (PE)</th>
+      <th style="padding: 12px 8px;">Self-Attention + MLP (No PE)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: #f2f2f2; transition: background 0.3s;">
+      <td style="padding: 10px;">250</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">✅</td>
+    </tr>
+    <tr style="transition: background 0.3s;">
+      <td style="padding: 10px;">500</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">✅</td>
+    </tr>
+    <tr style="background-color: #f2f2f2; transition: background 0.3s;">
+      <td style="padding: 10px;">750</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">✅</td>
+    </tr>
+    <tr style="transition: background 0.3s;">
+      <td style="padding: 10px;">1000</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="background-color: #f2f2f2; transition: background 0.3s;">
+      <td style="padding: 10px;">1250</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="transition: background 0.3s;">
+      <td style="padding: 10px;">1500</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="background-color: #f2f2f2; transition: background 0.3s;">
+      <td style="padding: 10px;">1750</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="transition: background 0.3s;">
+      <td style="padding: 10px;">2000</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="background-color: #f2f2f2; transition: background 0.3s;">
+      <td style="padding: 10px;">2250</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="transition: background 0.3s;">
+      <td style="padding: 10px;">2500</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="background-color: #f2f2f2; transition: background 0.3s;">
+      <td style="padding: 10px;">2750</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+    <tr style="transition: background 0.3s;">
+      <td style="padding: 10px;">3000</td>
+      <td style="padding: 10px;">✅</td>
+      <td style="padding: 10px;">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2>Interpretability</h2>
+
+<p>
+  In self-attention, each token embedding has three vectors: <b>Query (Q)</b>, <b>Key (K)</b>, and <b>Value (V)</b>.
+</p>
+<ul>
+  <li><b>Query (Q):</b> What the token is looking for.</li>
+  <li><b>Key (K):</b> What the token offers to others.</li>
+  <li><b>Value (V):</b> The information content carried by the token.</li>
+  <li><b>Attention weights:</b> Computed as <code>softmax(QK<sup>T</sup> / √d<sub>k</sub>)</code>, telling how much each token should attend to others.</li>
+  <li><b>Output:</b> The new token representation is a weighted sum of the value vectors according to attention weights.</li>
+</ul>
+
+<p>
+  In this figure, we visualize the attention weights as a heatmap to show how the model’s focus changes when a predefined motif is manually shifted along a sequence of length 100 8-dimensional vectors.
+  When the motif is above the half point, the label is positive. When the motif is below the half point, the label is negative. 
+</p>
+<img src="images/2.3 attention_heatmap.gif" alt="Attention GIF" width="800">
+
+ 
+<h2>Code</h2>
+<ul>
+  <li>
+    <a href="https://colab.research.google.com/drive/1-3PyxGslKZBU36QRVoTZ4j9exfWYso0V?usp=sharing" target="_blank" style="text-decoration:none;">
+      Open in Google Colab
+    </a>
+  </li>
+</ul>
+
+
+</body>
+</html>
