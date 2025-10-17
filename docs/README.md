@@ -20,7 +20,9 @@ Creating minimal empirical examples to appreciate how different AI architectures
   Positional Encoding vs No Positional Encoding: A Minimal Example
 </a>
 <a href="shared_vs_separate.html" target="_blank">
-  Separate Wq, Wk, Wv vs Shared Wq = Wk = Wv Projection Matrices: A Minimal Example
+  Separate 
+  W<sub>Q</sub>, W<sub>K</sub>, W<sub>V</sub> vs Shared 
+  W<sub>Q</sub> = W<sub>K</sub> = W<sub>V</sub> Projection Matrices
 </a>
 </div>
 
